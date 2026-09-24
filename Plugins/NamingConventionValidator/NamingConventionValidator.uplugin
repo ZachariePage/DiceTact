@@ -1,0 +1,24 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Naming Convention Validation",
+	"Description": "Utility editor plugin that performs validation on assets based on Naming Conventions.",
+	"Category": "Other",
+	"CreatedBy": "Justin Renaud-Gélinas",
+	"CreatedByURL": "https://github.com/Justin5535",
+	"DocsURL": "https://github.com/Justin5535/NCV",
+	"MarketplaceURL": "https://github.com/Justin5535/NCV",
+	"SupportURL": "",
+	"EngineVersion": "5.7.0",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "NamingConventionValidator",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}

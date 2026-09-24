@@ -1,0 +1,34 @@
+﻿// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/Interface.h"
+#include "Pushable.generated.h"
+
+// This class does not need to be modified.
+UINTERFACE(MinimalAPI, Blueprintable)
+class UPushable : public UInterface
+{
+	GENERATED_BODY()
+};
+
+/**
+ * 
+ */
+class DICETACT_API IPushable
+{
+	GENERATED_BODY()
+
+	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
+public:
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "push")
+	bool PushTowardVelocity(FVector direction, AActor* pushingActor = nullptr);
+	
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "push")
+	bool PushToward(FVector direction, float strength, AActor* pushingActor = nullptr);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "push")
+	bool PushTowardWithAdditionalZVelocity(FVector direction, float strength, float additionalZVelocity, AActor* pushingActor = nullptr);
+	
+};

@@ -1,0 +1,25 @@
+﻿// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/Interface.h"
+#include "TurnConsumingAbility.generated.h"
+
+UINTERFACE(BlueprintType)
+class UTurnConsumingAbility : public UInterface
+{
+	GENERATED_BODY()
+};
+
+class DICETACT_API ITurnConsumingAbility
+{
+	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Ability")
+	bool DoesItConsumeTurn();
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Ability")
+	int ManaCost();
+};
