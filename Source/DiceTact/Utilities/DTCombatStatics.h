@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Core/subsystem/ActorFactorySubSystem.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "DTCombatStatics.generated.h"
 
@@ -18,4 +19,5 @@ class DICETACT_API UDTCombatStatics : public UBlueprintFunctionLibrary
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	static UTurnBaseComponent* GetTurnManager();
+	static bool TryGetDiceTypeFromSides(int Sides, EDiceType& OutType);
 };

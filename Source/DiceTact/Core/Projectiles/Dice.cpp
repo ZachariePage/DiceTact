@@ -14,6 +14,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "JUE/System/JUEDevelopmentStatics.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Utilities/DTCombatStatics.h"
 
 
 // Sets default values
@@ -293,95 +294,123 @@ UPrimitiveComponent* ADice::GetDicePhysicalComponent() const
 
 void ADice::OnDiceHit(ADice* OtherDice, const FHitResult& Hit)
 {
-    bool otherDiceIsDivisible = false;
-    int divisionAmount = 0;
+	bool otherDiceIsDivisible = false;
+	int divisionAmount = 0;
 
-    if (OtherDice->GetNumberOfSide() % numberOfSide == 0 &&
-       !OtherDice->bDivisionPending &&
-       OtherDice->GetNumberOfSide() != GetNumberOfSide())
+	int OtherSides = OtherDice->GetNumberOfSide();
+	int MySides = GetNumberOfSide();
+	// if (OtherDice->GetNumberOfSide() % numberOfSide == 0 &&
+	//    !OtherDice->bDivisionPending &&
+	//    OtherDice->GetNumberOfSide() != GetNumberOfSide())
+	// {
+	//    otherDiceIsDivisible = true;
+	//    divisionAmount = OtherDice->GetNumberOfSide() / numberOfSide;
+	//    OtherDice->bDivisionPending = true;
+	// }
+
+	if (OtherSides > MySides && !OtherDice->bDivisionPending)
+	{
+	    FractureDice(OtherDice);
+    }
+    else
     {
-       otherDiceIsDivisible = true;
-       divisionAmount = OtherDice->GetNumberOfSide() / numberOfSide;
-       OtherDice->bDivisionPending = true;
+       FVector RelativeVelocity = DiceMesh->GetPhysicsLinearVelocity() - OtherDice->DiceMesh->GetPhysicsLinearVelocity();
+       float ClosingSpeed = FVector::DotProduct(RelativeVelocity, Hit.ImpactNormal);
+
+       ApplyImpulseToDice(OtherDice, Hit, ClosingSpeed);
+    }
+}
+
+void ADice::FractureDice(ADice* OtherDice)
+{
+	int OtherSides = OtherDice->GetNumberOfSide();
+	int MySides = GetNumberOfSide();
+	int Quotient  = OtherSides / MySides;
+	int Leftover = OtherSides % MySides;
+
+	TArray<EDiceType> DiceToSpawn;
+
+	for (int i = 0; i < Quotient; ++i)
+	{
+		EDiceType MyType;
+		if (UDTCombatStatics::TryGetDiceTypeFromSides(MySides, MyType))
+		{
+			DiceToSpawn.Add(MyType);
+		}
+	}
+
+	if (Leftover > 0)
+	{
+		EDiceType LeftoverType;
+		if (UDTCombatStatics::TryGetDiceTypeFromSides(Leftover, LeftoverType))
+		{
+			DiceToSpawn.Add(LeftoverType);
+		}
+	}
+
+	FVector HitDiceVelocity = DiceCollisionData->UsePreviousFrameVelocity ? CachedVelocity : DiceMesh->GetPhysicsLinearVelocity();
+
+	FVector SpreadAxis = FVector::CrossProduct(HitDiceVelocity.GetSafeNormal(), FVector::UpVector);
+	if (SpreadAxis.IsNearlyZero())
+	{
+		SpreadAxis = FVector::RightVector;
+	}
+	SpreadAxis.Normalize();
+
+	UActorFactorySubSystem* ActorFactorySubsystem = GetWorld()->GetGameInstance()->GetSubsystem<UActorFactorySubSystem>();
+
+	for (int i = 0; i < DiceToSpawn.Num(); ++i)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+        SpawnParameters.Owner = GetInstigator();
+        SpawnParameters.Instigator = GetInstigator();
+
+		int sign = 1;
+		if (i % 2 != 0)
+		{
+			sign = -1;
+		}
+        float SideOffsetDistance = DiceCollisionData->SideOffsetDistance + (i / 2) * DiceCollisionData->SpacingBetweenDice;
+		FVector SideOffset = SpreadAxis * SideOffsetDistance;
+
+		FTransform SpawnTransform = UKismetMathLibrary::Conv_VectorToTransform(
+            OtherDice->GetActorLocation() + (SideOffset * sign));
+
+        ADice* SpawnedDice = ActorFactorySubsystem->SpawnDiceFromType(
+            GetWorld(),
+            DiceToSpawn[i],
+            ResolveDefinition,
+            SpawnTransform,
+            SpawnParameters,
+            false
+        );
+
+        if (SpawnedDice)
+        {
+            if (SpawnedDice->DiceMesh)
+            {
+                FVector SpawnVelocity = HitDiceVelocity;
+                SpawnVelocity.Z += DiceCollisionData->AdditionalUpwardImpulse;
+                SpawnedDice->DiceMesh->SetPhysicsLinearVelocity(SpawnVelocity);
+
+                FVector Torque(
+                    DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueX, DiceCollisionData->RandomTorqueX),
+                    DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueY, DiceCollisionData->RandomTorqueY),
+                    DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueZ, DiceCollisionData->RandomTorqueZ)
+                );
+                SpawnedDice->DiceMesh->AddTorqueInRadians(Torque * DiceCollisionData->Torque, NAME_None, true);
+            }
+            CanProcessHit(SpawnedDice);
+        }
+        else
+        {
+            UJUEDevelopmentStatics::ReportDebugMessage("failed to spawn dice");
+        }
     }
 
-    if (otherDiceIsDivisible && divisionAmount > 0)
-    {
-    	FVector HitDiceVelocity = DiceMesh->GetPhysicsLinearVelocity();
-    	if (DiceCollisionData->UsePreviousFrameVelocity)
-    	{
-    		HitDiceVelocity = CachedVelocity;
-    	}
-       
-    	
-		FVector SpreadAxis = FVector::CrossProduct(HitDiceVelocity.GetSafeNormal(), FVector::UpVector);
-		if (SpreadAxis.IsNearlyZero())
-		{
-		   SpreadAxis = FVector::RightVector;
-		}
-		SpreadAxis.Normalize();
+    OtherDice->DestroyDice();
 
-	       for (int i = 0; i < divisionAmount; ++i)
-	       {
-	          UActorFactorySubSystem* ActorFactorySubsystem = GetWorld()->GetGameInstance()->GetSubsystem<UActorFactorySubSystem>();
-
-	          FActorSpawnParameters SpawnParameters;
-	          SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
-	          SpawnParameters.Owner = GetInstigator();
-	          SpawnParameters.Instigator = GetInstigator();
-
-       		  int sign = 1;
-	          if (i % 2 != 0)
-	          {
-		          sign = -1;
-	          }
-	       		const float SideOffsetDistance = DiceCollisionData->SideOffsetDistance + (i / 2) * DiceCollisionData->SpacingBetweenDice;
-
-	       		const FVector SideOffset = SpreadAxis * SideOffsetDistance;
-       		
-	          const FTransform SpawnTransform = UKismetMathLibrary::Conv_VectorToTransform(
-	             OtherDice->GetActorLocation() + (SideOffset * sign));
-       		
-	          ADice* SpawnedDice = ActorFactorySubsystem->SpawnDiceFromType(
-	             GetWorld(),
-	             EDiceType::four,
-	             ResolveDefinition,
-	             SpawnTransform,
-	             SpawnParameters,
-	             false
-	          );
-
-	          if (SpawnedDice)
-	          {
-	             if (SpawnedDice->DiceMesh)
-	             {
-	             	FVector SpawnVelocity = HitDiceVelocity;
-	             	SpawnVelocity.Z += DiceCollisionData->AdditionalUpwardImpulse;
-	             	SpawnedDice->DiceMesh->SetPhysicsLinearVelocity(SpawnVelocity);
-             		FVector Torque(
-					DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueX, DiceCollisionData->RandomTorqueX),
-					DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueY, DiceCollisionData->RandomTorqueY),
-					DiceCollisionData->RandomSignedRange(DiceCollisionData->MinimumRandomTorqueZ, DiceCollisionData->RandomTorqueZ)
-					);
-             		SpawnedDice->DiceMesh->AddTorqueInRadians(Torque * DiceCollisionData->Torque, NAME_None, true);
-	             }
-	          	CanProcessHit(SpawnedDice);
-	          }
-	          else
-	          {
-	             UJUEDevelopmentStatics::ReportDebugMessage("failed to spawn dice");
-	          }
-	       }
-
-	       OtherDice->DestroyDice();
-	    }
-	    else
-	    {
-	       FVector RelativeVelocity = DiceMesh->GetPhysicsLinearVelocity() - OtherDice->DiceMesh->GetPhysicsLinearVelocity();
-	       float ClosingSpeed = FVector::DotProduct(RelativeVelocity, Hit.ImpactNormal);
-
-	       ApplyImpulseToDice(OtherDice, Hit, ClosingSpeed);
-	    }
 }
 
 void ADice::ApplyImpulseToDice(ADice* OtherDice, const FHitResult& Hit, float ClosingSpeed)

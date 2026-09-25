@@ -75,6 +75,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void OnDiceHit(ADice* OtherDice, const FHitResult& Hit);
+	void FractureDice(ADice* OtherDice);
 	void ApplyImpulseToDice(ADice* OtherDice, const FHitResult& Hit, float ComingSpeedDice);
 	UFUNCTION(BlueprintCallable)
 	void OnCollisionWithDice(ADice* otherDice);
