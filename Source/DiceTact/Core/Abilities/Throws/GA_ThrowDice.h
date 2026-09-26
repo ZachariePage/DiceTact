@@ -9,6 +9,7 @@
 #include "Core/Interface/TurnConsumingAbility.h"
 #include "GA_ThrowDice.generated.h"
 
+class ADice;
 class UDTDiceItemInstance;
 class UDiceThrowData;
 class UResolveGameplayAbility;
@@ -64,6 +65,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Dice")
 	FVector OffsetSpawnLocation = FVector(200.f, 200.f, 0);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Time fastforward")
+	float speedOfFastForward = 1.2;
 	UFUNCTION(BlueprintCallable, Category = "Ability")
 	void SendPendingAbility();
 
@@ -77,6 +80,7 @@ protected:
 		const FGameplayEventData* TriggerEventData
 	) override;
 
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Ability Cost")
 	float ManaCost = 0;
 };

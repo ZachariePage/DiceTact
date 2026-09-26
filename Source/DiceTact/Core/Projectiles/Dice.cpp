@@ -292,6 +292,11 @@ UPrimitiveComponent* ADice::GetDicePhysicalComponent() const
 	return DiceMesh;
 }
 
+const UDTDiceResolveDefinition* ADice::GetDiceResolveDefinition() const
+{
+	return ResolveDefinition.Get();
+}
+
 void ADice::OnDiceHit(ADice* OtherDice, const FHitResult& Hit)
 {
 	bool otherDiceIsDivisible = false;
@@ -380,7 +385,7 @@ void ADice::FractureDice(ADice* OtherDice)
         ADice* SpawnedDice = ActorFactorySubsystem->SpawnDiceFromType(
             GetWorld(),
             DiceToSpawn[i],
-            ResolveDefinition,
+            OtherDice->GetDiceResolveDefinition(),
             SpawnTransform,
             SpawnParameters,
             false
@@ -473,6 +478,17 @@ void ADice::OnCollisionWithDice(ADice* otherDice)
 bool ADice::CanProcessHit(ADice* OtherDice)
 {
 	float Now = GetWorld()->GetTimeSeconds();
+	if (DiceCollisionData->bUseGlobalCooldown)
+	{
+		if (Now - latestHit < DiceCollisionData->GlobalCooldown)
+		{
+			latestHit = Now;
+			OtherDice->latestHit = Now;
+			UJUEDevelopmentStatics::ReportDebugMessage("can't process hit");
+			return false;
+		}
+	}
+	
 	if (float* LastTime = RecentHitTimestamps.Find(OtherDice))
 	{
 		if (Now - *LastTime < HitCooldown)
@@ -481,7 +497,9 @@ bool ADice::CanProcessHit(ADice* OtherDice)
 		}
 	}
 	RecentHitTimestamps.Add(OtherDice, Now);
+	latestHit = Now;
 	OtherDice->RecentHitTimestamps.Add(this, Now);
+	OtherDice->latestHit = Now;
 	return true;
 }
 
@@ -516,12 +534,17 @@ void ADice::DestroyDice()
 		CameraBlendTime,
 		false
 	);
-	FinishDestroy_Internal();
+	//FinishDestroy_Internal();
 }
 
 void ADice::OnResolveFinished(UGameplayAbility* Ability)
 {
 	DestroyDice();
+}
+
+FVector ADice::GetCachedVelocity() const
+{
+	return CachedVelocity;
 }
 
 void ADice::FinishDestroy_Internal()

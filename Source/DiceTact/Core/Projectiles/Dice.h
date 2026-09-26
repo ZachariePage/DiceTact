@@ -73,6 +73,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	UPrimitiveComponent* GetDicePhysicalComponent() const;
 
+	UFUNCTION()
+	const UDTDiceResolveDefinition* GetDiceResolveDefinition() const;
+
 	UFUNCTION(BlueprintCallable)
 	void OnDiceHit(ADice* OtherDice, const FHitResult& Hit);
 	void FractureDice(ADice* OtherDice);
@@ -97,6 +100,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
 	void OnDiceSettled();
 
+	UFUNCTION(BlueprintCallable)
+	FVector GetCachedVelocity() const;
+
 	//delagates
 	UPROPERTY(BlueprintAssignable, Category = "Collisions")
 	FOnSingleEvent OnFirstCollision;
@@ -116,6 +122,8 @@ public:
 	
 	UStaticMeshComponent* GetStaticMeshComponent() const;
 	UDiceCollision* GetDiceCollision() const;
+	UPROPERTY()
+	float latestHit = 0.f;
 protected:
 	
 
@@ -169,6 +177,7 @@ protected:
 	bool bSettled = false;
 	UPROPERTY()
 	bool bSentAbility = false;
+	
 	UPROPERTY()
 	TMap<TWeakObjectPtr<ADice>, float> RecentHitTimestamps;
 	const float HitCooldown = 1.f;

@@ -60,6 +60,11 @@ public:
 	float AdditionalUpwardImpulse = 120.0f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Fracture")
 	bool UsePreviousFrameVelocity = false;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Collision")
+	bool bUseGlobalCooldown = false;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Collision",meta = (EditCondition = "bUseGlobalCooldown", EditConditionHides))
+	float GlobalCooldown = 0.25f;
 
 	static float RandomSignedRange(float Min, float Max)
 	{

@@ -7,6 +7,7 @@
 #include "Camera/CameraComponent.h"
 #include "DiceCamera.generated.h"
 
+class ACameraPawn;
 class ADice;
 UCLASS()
 class DICETACT_API ADiceCamera : public AActor
@@ -29,7 +30,12 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	ADice* Dice;
 
-	
+	UPROPERTY()
+	ACameraPawn* CachedCamPawn = nullptr;
+
+	FTimerHandle DeactivateTimerHandle;
+	FTimerHandle SelfDestructTimerHandle;
+	bool bIsResetting = false;
 	/*
 	bool bDiceSettled;
 	*/

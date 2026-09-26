@@ -18,7 +18,9 @@ void UFoudre::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGa
 		EndAbility(Handle, ActorInfo, ActivationInfo, true, true);
 		return;
 	}
- 
+	//HATEFULL BOILERPLATE TO REWORK WHEN TIEM
+	OnDiceActivation(ActorInfo->OwnerActor->GetActorLocation());
+	
 	CachedHandle = Handle;
 	CachedActorInfo = ActorInfo;
 	CachedActivationInfo = ActivationInfo;
@@ -48,6 +50,7 @@ void UFoudre::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGa
 			FString message = Target->GetName() + " : take damage!";
 			UJUEDevelopmentStatics::ReportDebugMessage(message);
 			HitActorExplosion(Target);
+			OnDiceHitTarget(ActorInfo->OwnerActor->GetActorLocation(), Target->GetOwner()->GetActorLocation(), Target->GetOwner());
 		}
 	}
  
@@ -115,6 +118,7 @@ void UFoudre::ProcessWave(TArray<TWeakObjectPtr<AActor>> WaveTargets)
 				FString message = Candidate->GetName() + " : take damage!";
 				UJUEDevelopmentStatics::ReportDebugMessage(message);
 				HitActorExplosion(Candidate);
+				OnDiceHitTarget(GetActorInfo().OwnerActor->GetActorLocation(), Candidate->GetOwner()->GetActorLocation(), Candidate->GetOwner());
 			}
 		}
 	}

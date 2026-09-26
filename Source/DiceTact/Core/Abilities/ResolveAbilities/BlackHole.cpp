@@ -5,6 +5,7 @@
 
 #include "Core/Abilities/Definitions/DTBlackHoleData.h"
 #include "Core/Interface/Pushable.h"
+#include "Core/Projectiles/Dice.h"
 #include "Engine/OverlapResult.h"
 #include "JUE/System/JUEDevelopmentStatics.h"
 #include "Kismet/GameplayStatics.h"
@@ -13,7 +14,9 @@ void UBlackHole::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const 
                                  const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
-
+    //HATEFULL BOILERPLATE TO REWORK WHEN TIEM
+    OnDiceActivation(ActorInfo->OwnerActor->GetActorLocation());
+    
 	TArray<FOverlapResult> Overlaps;
     float radius = data->BaseRadius + data->AdditionalRadius * GetAbilityLevel();
     FCollisionShape Sphere = FCollisionShape::MakeSphere(radius);
@@ -89,6 +92,7 @@ void UBlackHole::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const 
             target->SetPhysicsLinearVelocity(FVector::ZeroVector);
             target->AddImpulse(LaunchVelocity, NAME_None, true);
         }
+        OnDiceHitTarget(ActorInfo->OwnerActor->GetActorLocation(), target->GetOwner()->GetActorLocation(), target->GetOwner());
     }
 
     const int CountPushable = PushableTargets.Num();
@@ -123,6 +127,15 @@ void UBlackHole::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const 
         {
             IPushable::Execute_PushTowardVelocity(target, LaunchVelocity, ActorInfo->OwnerActor.Get());
         }
+
+        ADice* ResolvingDice = Cast<ADice>(ActorInfo->OwnerActor);
+        ADice* otherDice = Cast<ADice>(target);
+        if (otherDice && ResolvingDice)
+        {
+            otherDice->CanProcessHit(ResolvingDice);
+        }
+
+        OnDiceHitTarget(ActorInfo->OwnerActor->GetActorLocation(), target->GetActorLocation(), target);
     }
     
     PulledTargets.Reset();

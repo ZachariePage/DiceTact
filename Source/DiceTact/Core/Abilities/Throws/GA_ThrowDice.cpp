@@ -9,6 +9,7 @@
 #include "Core/Dice/Definitions/DTDiceObjectDefinition.h"
 #include "Core/Dice/Definitions/DTDiceResolveDefinition.h"
 #include "Core/subsystem/ActorFactorySubSystem.h"
+#include "Core/subsystem/TimeControllerSubsystem.h"
 #include "JUE/System/JUEDevelopmentStatics.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
@@ -102,6 +103,14 @@ void UGA_ThrowDice::SpawnDice()
 
 		//Bind Dice's settle to the ability's end
 		SpawnedDice->OnDiceSettle.AddUniqueDynamic(this, &UGA_ThrowDice::SendPendingAbility);
+
+		if (UGameInstance* GameInstance = Avatar->GetGameInstance())
+		{
+			if (UTimeControllerSubsystem* sub = GameInstance->GetSubsystem<UTimeControllerSubsystem>())
+			{
+				sub->StartFastForward(speedOfFastForward);
+			}
+		}
 	}
 }
 
@@ -162,4 +171,20 @@ void UGA_ThrowDice::ActivateAbility(
 	);
 
 	SpawnDice();
+}
+
+void UGA_ThrowDice::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
+	const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
+{
+	if (AActor* player = GetCurrentActorInfo()->AvatarActor.Get())
+	{
+		if (UGameInstance* GameInstance = player->GetGameInstance())
+		{
+			if (UTimeControllerSubsystem* sub = GameInstance->GetSubsystem<UTimeControllerSubsystem>())
+			{
+				sub->StopFastForward();
+			}
+		}
+	}
+	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
 }

@@ -43,9 +43,10 @@ void ADiceCamera::BeginPlay()
 	
 	if (ACameraPawn* CamPawn = Cast<ACameraPawn>(PC->GetPawn()))
 	{
-		FTimerHandle DeactivateTimer;
+		CachedCamPawn = CamPawn;
+
 		GetWorldTimerManager().SetTimer(
-			DeactivateTimer,
+			DeactivateTimerHandle,
 			[CamPawn]()
 			{
 				if (IsValid(CamPawn))
@@ -64,7 +65,7 @@ void ADiceCamera::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!Dice)
+	if (!IsValid(Dice))
 	{
 		return;
 	}
@@ -85,11 +86,50 @@ void ADiceCamera::Tick(float DeltaTime)
 
 void ADiceCamera::ResetAndDiscardCamera()
 {
+	if (bIsResetting)
+	{
+		return;
+	}
+	bIsResetting = true;
+
+	GetWorldTimerManager().ClearTimer(DeactivateTimerHandle);
+
+	if (Dice)
+	{
+		Dice->OnDiceSettle.RemoveDynamic(this, &ADiceCamera::ResetAndDiscardCamera);
+	}
+
+	constexpr float ReturnBlendTime = 0.75f;
+
 	if (ADTPlayerController_Combat* PC = Cast<ADTPlayerController_Combat>(GetWorld()->GetFirstPlayerController()))
 	{
-		PC->ResetCamera();
+		if (IsValid(CachedCamPawn))
+		{
+			CachedCamPawn->SetCameraActive(true);
+		}
+
+		PC->SetViewTargetWithBlend(
+			CachedCamPawn,
+			ReturnBlendTime,
+			VTBlend_Cubic,
+			0.f,
+			false
+		);
 	}
-	//Destroy self
+
+
+		GetWorldTimerManager().SetTimer(
+		SelfDestructTimerHandle,
+		[this]()
+		{
+			if (IsValid(this))
+			{
+				Destroy();
+			}
+		},
+		ReturnBlendTime,
+		false
+	);
 }
 
 void ADiceCamera::SetDice(ADice* _dice)

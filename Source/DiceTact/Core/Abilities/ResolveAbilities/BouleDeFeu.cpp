@@ -5,7 +5,9 @@
 
 #include "Core/Abilities/AbilityActors/BouleDeFeuActor.h"
 #include "Core/Abilities/Definitions/DTBouleDeFeu.h"
+#include "Core/Interface/Pushable.h"
 #include "Engine/OverlapResult.h"
+#include "JUE/System/JUEDevelopmentStatics.h"
 #include "Kismet/GameplayStatics.h"
 
 void UBouleDeFeu::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
@@ -18,6 +20,9 @@ void UBouleDeFeu::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const
 		K2_EndAbility();
 		return;
 	}
+
+	//HATEFULL BOILERPLATE TO REWORK WHEN TIEM
+	OnDiceActivation(ActorInfo->OwnerActor->GetActorLocation());
 
 	cachedDice = ActorInfo->OwnerActor;
 	cachedPawn = ActorInfo->OwnerActor;
@@ -118,6 +123,8 @@ void UBouleDeFeu::TriggerExplosion(const FVector& ExplosionLocation)
 	);
     
 	TArray<UPrimitiveComponent*> Targets;
+	TArray<AActor*> PushableTargets;
+	
 	for (const FOverlapResult& Result : Overlaps)
 	{
 		if (UPrimitiveComponent* hit = Result.GetComponent())
@@ -125,6 +132,13 @@ void UBouleDeFeu::TriggerExplosion(const FVector& ExplosionLocation)
 			if (hit->IsSimulatingPhysics() && hit->GetOwner() != cachedDice && hit->GetOwner() != cachedPawn)
 			{
 				Targets.AddUnique(hit);
+			}
+			else if (AActor* Owner = hit->GetOwner())
+			{
+				if (IPushable* Pushable = Cast<IPushable>(Owner))
+				{
+					PushableTargets.AddUnique(Owner);
+				}
 			}
 		}
 	}
@@ -154,6 +168,39 @@ void UBouleDeFeu::TriggerExplosion(const FVector& ExplosionLocation)
 		Target->SetPhysicsLinearVelocity(FVector::ZeroVector);
 		Target->AddImpulse(LaunchVelocity, NAME_None, true);
 		PropelledTargets.Add(Target);
+
+		OnDiceHitTarget(GetActorInfo().OwnerActor->GetActorLocation(), Target->GetOwner()->GetActorLocation(), Target->GetOwner());
+	}
+
+	const int CountPushable = PushableTargets.Num();
+
+	for (int i = 0; i < CountPushable; i++)
+	{
+		AActor* target = PushableTargets[i];
+		FVector Direction = target->GetActorLocation() - ExplosionLocation;
+		const float Distance = Direction.Size();
+
+		if (Direction.IsNearlyZero())
+		{
+			Direction = FMath::VRand();
+		}
+		else
+		{
+			Direction.Normalize();
+		}
+			
+		Direction.Z = FMath::Max(Direction.Z, AbilityData->ExplosionUpwardBias);
+		Direction.Normalize();
+		
+		const float Alpha = FMath::Clamp(1.f - (Distance / radius), 0.f, 1.f);
+		const float Strength = FMath::Lerp(AbilityData->MinExplosionStrength, AbilityData->MaxExplosionStrength, Alpha);
+
+		const FVector LaunchVelocity = Direction * Strength;
+
+		if (target->GetClass()->ImplementsInterface(UPushable::StaticClass()))
+		{
+			IPushable::Execute_PushTowardVelocity(target, LaunchVelocity, GetCurrentActorInfo()->OwnerActor.Get());
+		}
 	}
 
 	if (PropelledTargets.Num() == 0)
@@ -172,7 +219,7 @@ void UBouleDeFeu::CheckIfAtRest()
 	const float ThresholdSq = FMath::Square(AbilityData->RestVelocityThreshold);
 	bool bAllAtRest = true;
 
-	for (int32 i = PropelledTargets.Num() - 1; i >= 0; i--)
+	for (int i = PropelledTargets.Num() - 1; i >= 0; i--)
 	{
 		UPrimitiveComponent* Target = PropelledTargets[i].Get();
 

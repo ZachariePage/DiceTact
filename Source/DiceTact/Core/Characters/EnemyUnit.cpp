@@ -58,7 +58,12 @@ bool AEnemyUnit::PushToward_Implementation(FVector direction, float strength, AA
 
 bool AEnemyUnit::PushTowardWithAdditionalZVelocity_Implementation(FVector direction, float strength,float additionalZVelocity, AActor* pushingActor)
 {
-	float PusherVelocity = pushingActor->GetVelocity().Size();
+	FVector DirectionBetween = (GetActorLocation() - pushingActor->GetActorLocation()).GetSafeNormal();
+	
+	FVector PushVelocity = direction * strength;
+	
+	float PusherVelocity = FVector::DotProduct(PushVelocity, DirectionBetween);
+	PusherVelocity = FMath::Max(PusherVelocity, 0.f); 
 	float Intensity = FMath::Clamp(PusherVelocity / CollisionData->MaxSpeed, 0.f, 1.f);
 	float ImpulseStrength = FMath::Lerp(CollisionData->MinDiceImpulseSpeed, CollisionData->MaxDiceImpulseSpeed, Intensity);
 
@@ -102,7 +107,6 @@ bool AEnemyUnit::PushTowardVelocity_Implementation(FVector direction, AActor* pu
 
 FDamageInfo AEnemyUnit::TakeDamage_Implementation(AActor* Dealer, int Damage)
 {
-	UJUEDevelopmentStatics::ReportDebugMessage("take damage meow");
 	FDamageInfo result = HealthComp->TakeDamage(Dealer, Damage);
 	if (result.killedTarget)
 	{
@@ -172,7 +176,6 @@ void AEnemyUnit::TickRagdoll(float DeltaTime)
 
 void AEnemyUnit::EndRagdoll()
 {
-	UJUEDevelopmentStatics::ReportDebugMessage("end ragdoll");
 	UCapsuleComponent* Capsule = GetCapsuleComponent();
 	if (!Capsule) return;
 

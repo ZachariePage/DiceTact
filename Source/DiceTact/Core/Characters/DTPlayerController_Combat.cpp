@@ -110,7 +110,11 @@ void ADTPlayerController_Combat::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (AbilitySelectionState == EAbilitySelectionState::Targeting)
 	{
-		DrawTargetingRay();
+		if (bShowDebugRay)
+		{
+			DrawTargetingRay();
+		}
+		
 		if (HasDiceSelected())
 		{
 			PredictTrajectory(cachedStrength, PossessedUnit->GetThrowTypeData());
@@ -512,7 +516,7 @@ TArray<FVector> ADTPlayerController_Combat::PredictTrajectory(
     Direction.Normalize();
 
 	//need match offset with throwdice ability. Need a way to get the ability, for now magic number yeeeeeeeeeeeee
-    const FVector DiceSpawnLocation = AvatarLocation + (SpawnDirection * FVector(200.f, 200.f, 0)); 
+    const FVector DiceSpawnLocation = AvatarLocation + (SpawnDirection * FVector(100.f, 100.f, 0)); 
 
     const TSubclassOf<UDiceMovementComponent> MovementCompClass = ThrowTypeData->GetMovementComponentSubclass();
 	const UDiceMovementComponent* MovementCDO = nullptr;
@@ -549,7 +553,15 @@ TArray<FVector> ADTPlayerController_Combat::PredictTrajectory(
             Acceleration += MovementCDO->PredictAcceleration(ElapsedTime, Position, Velocity, ThrowTypeData);
         }
 
-        Velocity += Acceleration * TimeStep;
+    	if (ElapsedTime = 0.f)
+    	{
+    		Velocity += Acceleration;
+    	}
+	    else
+	    {
+	    	Velocity += Acceleration * TimeStep;
+	    }
+        
         Velocity *= FMath::Exp(-LinearDamping * TimeStep);
 
         const FVector NewPosition = Position + Velocity * TimeStep;

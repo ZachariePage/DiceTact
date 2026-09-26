@@ -112,7 +112,8 @@ public:
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
-
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Previsualisation")
+	bool bShowDebugRay = false;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Action")
 	TObjectPtr<AHeroCharacter> PossessedUnit;
