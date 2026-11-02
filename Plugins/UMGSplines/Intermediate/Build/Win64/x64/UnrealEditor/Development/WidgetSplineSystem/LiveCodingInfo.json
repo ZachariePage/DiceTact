@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WidgetSplineSystem.cpp.obj": [
+			"SlateSpline.gen.cpp.obj",
+			"SlateSplineCurves.gen.cpp.obj",
+			"SlateSplinePoint.gen.cpp.obj",
+			"SplineWidget.gen.cpp.obj",
+			"SplineWidgetFunctionLibrary.gen.cpp.obj",
+			"WidgetSplineSystem.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"SlateSplineCurves.cpp.obj",
+			"SplineBuilder.cpp.obj",
+			"SSpline.cpp.obj",
+			"SplineWidget.cpp.obj",
+			"SplineWidgetFunctionLibrary.cpp.obj",
+			"WidgetSplineSystem.cpp.obj"
+		]
+	}
+}

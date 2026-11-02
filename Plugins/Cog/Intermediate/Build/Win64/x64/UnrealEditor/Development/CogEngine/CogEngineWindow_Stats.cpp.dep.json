@@ -1,0 +1,38 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogengine\\private\\cogenginewindow_stats.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogengine\\definitions.cogengine.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogengine\\public\\cogenginewindow_stats.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\public\\cogwindow.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommonconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogcommon\\uht\\cogcommonconfig.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogengine\\uht\\cogenginewindow_stats.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommon.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommonlogcategory.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\coglocalizationconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebug.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugevent.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugsettings.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogdebug\\uht\\cogdebugsettings.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugtracker.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugtrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugplottrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugeventtrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguihelper.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\public\\cogwidgets.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\public\\coghelper.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fielditerator.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerstate.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

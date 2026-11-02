@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogcommonui\\source\\cogcommonui\\private\\cogcommonui_actionrouter.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogcommonui\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogcommonui\\definitions.cogcommonui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogcommonui\\source\\cogcommonui\\public\\cogcommonui_actionrouter.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\input\\commonuiactionrouterbase.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\source\\commoninput\\public\\commoninputmodetypes.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputmodetypes.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\input\\uiactionbindinghandle.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\uiactionbindinghandle.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonuiactionrouterbase.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogcommonui\\intermediate\\build\\win64\\unrealeditor\\inc\\cogcommonui\\uht\\cogcommonui_actionrouter.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiinputhelper.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\coginputchord.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogimgui\\uht\\coginputchord.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imconfig.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

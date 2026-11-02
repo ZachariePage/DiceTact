@@ -1,0 +1,35 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogAbility.cpp.obj": [
+			"CogAbility.init.gen.cpp.obj",
+			"CogAbilityCheat_Execution_ActivateAbility.gen.cpp.obj",
+			"CogAbilityCheat_Execution_ApplyEffect.gen.cpp.obj",
+			"CogAbilityConfig_Alignment.gen.cpp.obj",
+			"CogAbilityDataAsset.gen.cpp.obj",
+			"CogAbilityReplicator.gen.cpp.obj",
+			"CogAbilitySubsystem.gen.cpp.obj",
+			"CogAbilityWindow_Abilities.gen.cpp.obj",
+			"CogAbilityWindow_Attributes.gen.cpp.obj",
+			"CogAbilityWindow_Cheats.gen.cpp.obj",
+			"CogAbilityWindow_Effects.gen.cpp.obj",
+			"CogAbilityWindow_Tags.gen.cpp.obj",
+			"CogAbilityWindow_Tasks.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogAbilityCheat_Execution_ActivateAbility.cpp.obj",
+			"CogAbilityCheat_Execution_ApplyEffect.cpp.obj",
+			"CogAbilityConfig_Alignment.cpp.obj",
+			"CogAbilityHelper.cpp.obj",
+			"CogAbilityModule.cpp.obj",
+			"CogAbilityReplicator.cpp.obj",
+			"CogAbilityWindow_Abilities.cpp.obj",
+			"CogAbilityWindow_Attributes.cpp.obj",
+			"CogAbilityWindow_Cheats.cpp.obj",
+			"CogAbilityWindow_Effects.cpp.obj",
+			"CogAbilityWindow_Pools.cpp.obj",
+			"CogAbilityWindow_Tags.cpp.obj",
+			"CogAbilityWindow_Tasks.cpp.obj",
+			"CogAbilityWindow_Tweaks.cpp.obj"
+		]
+	}
+}

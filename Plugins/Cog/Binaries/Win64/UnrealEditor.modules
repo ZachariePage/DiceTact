@@ -1,0 +1,12 @@
+{
+	"BuildId": "47537391",
+	"Modules": 
+	{
+		"Cog": "UnrealEditor-Cog.dll",
+		"CogCommon": "UnrealEditor-CogCommon.dll",
+		"CogDebug": "UnrealEditor-CogDebug.dll",
+		"CogDebugEditor": "UnrealEditor-CogDebugEditor.dll",
+		"CogEngine": "UnrealEditor-CogEngine.dll",
+		"CogImgui": "UnrealEditor-CogImgui.dll"
+	}
+}

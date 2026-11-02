@@ -1,0 +1,26 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.NamingConventionValidator.cpp.obj": [
+			"EditorNCVSubsystem.gen.cpp.obj",
+			"EditorNCVTool.gen.cpp.obj",
+			"NamingConventionEntryWidget.gen.cpp.obj",
+			"NamingConventionValidator.init.gen.cpp.obj",
+			"NCValidationParameters.gen.cpp.obj",
+			"NCVEditorSettings.gen.cpp.obj",
+			"NCVResultCategory.gen.cpp.obj",
+			"NCVResultsSorterWidget.gen.cpp.obj",
+			"NCVUtilityStatics.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"EditorNCVSubsystem.cpp.obj",
+			"NCValidationParameters.cpp.obj",
+			"NCVEditorSettings.cpp.obj",
+			"NCVUtilityStatics.cpp.obj",
+			"NamingConventionValidator.cpp.obj",
+			"EditorNCVTool.cpp.obj",
+			"NamingConventionEntryWidget.cpp.obj",
+			"NCVResultCategory.cpp.obj",
+			"NCVResultsSorterWidget.cpp.obj"
+		]
+	}
+}

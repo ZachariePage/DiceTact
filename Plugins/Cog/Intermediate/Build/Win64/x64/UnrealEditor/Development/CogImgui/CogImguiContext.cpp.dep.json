@@ -1,0 +1,39 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\private\\cogimguicontext.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogimgui\\definitions.cogimgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguicontext.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguihelper.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiinputcatcherwidget.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiinputhelper.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\coginputchord.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogimgui\\uht\\coginputchord.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiwidget.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguidrawlist.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\engine\\classes\\engine\\console.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\enginesettings\\classes\\consolesettings.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\enginesettings\\uht\\consolesettings.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\console.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\applicationcore\\public\\hal\\platformapplicationmisc.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\applicationcore\\public\\windows\\windowsplatformapplicationmisc.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\genericplatformapplicationmisc.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui_internal.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\math.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\implot\\implot.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\core\\public\\misc\\engineversioncomparison.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\netimgui\\netimgui_api.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\netimgui\\netimgui_config.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\slate\\public\\widgets\\sviewport.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\coglocalizationconfig.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

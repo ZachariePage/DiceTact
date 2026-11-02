@@ -1,0 +1,26 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.JUE.cpp.obj": [
+			"JUE.init.gen.cpp.obj",
+			"JUEActionContext.gen.cpp.obj",
+			"JUEBaseController.gen.cpp.obj",
+			"JUEBaseModal.gen.cpp.obj",
+			"JUEDevelopmentStatics.gen.cpp.obj",
+			"JUEEngineSettings.gen.cpp.obj",
+			"JueGameSettings.gen.cpp.obj",
+			"JueGameUserSettings.gen.cpp.obj",
+			"JUESelectionTabData.gen.cpp.obj",
+			"JUESystemStatics.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"JUEBaseController.cpp.obj",
+			"JUE.cpp.obj",
+			"JUEDevelopmentStatics.cpp.obj",
+			"JUEEngineSettings.cpp.obj",
+			"JUESystemStatics.cpp.obj",
+			"JueGameUserSettings.cpp.obj",
+			"JUEActionContext.cpp.obj",
+			"JUEBaseModal.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CogEngine.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Intermediate/Build/Win64/x64/DiceTactEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogEngine/Module.CogEngine.1.cpp.obj"
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogEngine/Module.CogEngine.2.cpp.obj"
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogEngine/Default.rc2.res"
+/OUT:"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogEngine/UnrealEditor-CogEngine.lib"

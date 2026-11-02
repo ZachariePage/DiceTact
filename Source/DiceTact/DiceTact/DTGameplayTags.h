@@ -1,0 +1,63 @@
+#pragma once
+#include "NativeGameplayTags.h"
+
+/// State
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Dead);
+
+// Health
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Health_Low);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Health_Critical);
+
+// Debuffs
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Slowed);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Rooted);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Stunned);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Marked);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Taunted);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Silenced);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Chained);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Afraid);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Burning);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Burned);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Freezing);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Frozen);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Bleeding);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Debuff_Poisoned);
+
+// Buffs
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_State_Buff_Invulnerable);
+
+
+/// Damage
+// Delivery
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Ranged);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Melee);
+
+// Type
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Blunt);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Piercing);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Slashing);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Delivery_Magic);
+
+// Source
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Source_Enemy);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Source_Trap);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Source_Dice);
+
+// Element
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Element_Fire);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Element_Ice);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Element_Lightning);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Damage_Element_Poison);
+
+/// AI
+// Events
+
+// Actions
+
+
+/// Data
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Data_CooldownDuration);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Data_DamageAmount);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Data_DamageDuration);
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(TAG_Data_StatusEffectDuration);

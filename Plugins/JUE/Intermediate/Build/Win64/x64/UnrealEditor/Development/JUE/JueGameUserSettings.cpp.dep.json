@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\source\\jue\\system\\settings\\juegameusersettings.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\jue\\definitions.jue.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\source\\jue\\system\\settings\\juegameusersettings.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\source\\jue\\system\\settings\\juegamesettings.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\intermediate\\build\\win64\\unrealeditor\\inc\\jue\\uht\\juegamesettings.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\engine\\classes\\gameframework\\gameusersettings.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameusersettings.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\jue\\intermediate\\build\\win64\\unrealeditor\\inc\\jue\\uht\\juegameusersettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

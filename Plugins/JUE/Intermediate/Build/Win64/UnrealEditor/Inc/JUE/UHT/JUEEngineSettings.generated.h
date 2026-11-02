@@ -1,0 +1,70 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "System/JUEEngineSettings.h"
+
+#ifdef JUE_JUEEngineSettings_generated_h
+#error "JUEEngineSettings.generated.h already included, missing '#pragma once' in JUEEngineSettings.h"
+#endif
+#define JUE_JUEEngineSettings_generated_h
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UClass;
+class UCommonUserWidget;
+
+// ********** Begin Class UJUEEngineSettings *******************************************************
+#define FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetRootLayoutWidgetClass);
+
+
+struct Z_Construct_UClass_UJUEEngineSettings_Statics;
+JUE_API UClass* Z_Construct_UClass_UJUEEngineSettings_NoRegister();
+
+#define FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUJUEEngineSettings(); \
+	friend struct ::Z_Construct_UClass_UJUEEngineSettings_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend JUE_API UClass* ::Z_Construct_UClass_UJUEEngineSettings_NoRegister(); \
+public: \
+	DECLARE_CLASS2(UJUEEngineSettings, UDeveloperSettings, COMPILED_IN_FLAGS(0 | CLASS_DefaultConfig | CLASS_Config), CASTCLASS_None, TEXT("/Script/JUE"), Z_Construct_UClass_UJUEEngineSettings_NoRegister) \
+	DECLARE_SERIALIZER(UJUEEngineSettings) \
+	static constexpr const TCHAR* StaticConfigName() {return TEXT("Engine");} \
+
+
+
+#define FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_ENHANCED_CONSTRUCTORS \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UJUEEngineSettings(UJUEEngineSettings&&) = delete; \
+	UJUEEngineSettings(const UJUEEngineSettings&) = delete; \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UJUEEngineSettings); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UJUEEngineSettings); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UJUEEngineSettings) \
+	NO_API virtual ~UJUEEngineSettings();
+
+
+#define FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_13_PROLOG
+#define FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_INCLASS_NO_PURE_DECLS \
+	FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h_16_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+class UJUEEngineSettings;
+
+// ********** End Class UJUEEngineSettings *********************************************************
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_NewDiceTact_20263_Projets3e_DiceTact_DiceTactUE_Plugins_JUE_Source_JUE_System_JUEEngineSettings_h
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

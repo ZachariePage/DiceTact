@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\private\\cogmodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cog\\definitions.cog.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\public\\cogmodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

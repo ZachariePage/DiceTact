@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogCommon.gen.cpp.obj": [
+			"CogCommon.init.gen.cpp.obj",
+			"CogCommonAllegianceActorInterface.gen.cpp.obj",
+			"CogCommonConfig.gen.cpp.obj",
+			"CogCommonDebugFilteredActorInterface.gen.cpp.obj",
+			"CogCommonLog.gen.cpp.obj",
+			"CogCommonPossessorInterface.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogAll.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"CogAll.cpp.obj",
+			"CogAllModule.cpp.obj"
+		]
+	}
+}

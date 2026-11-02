@@ -1,0 +1,38 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebugeditor\\private\\scogdebuglogcategorygraphpin.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogdebugeditor\\definitions.cogdebugeditor.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebugeditor\\public\\scogdebuglogcategorygraphpin.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\editor\\grapheditor\\public\\sgraphpin.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\editor\\grapheditor\\public\\sgraphnode.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\editor\\grapheditor\\public\\snodepanel.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\engine\\public\\diffresults.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\editor\\grapheditor\\public\\marqueeoperation.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\grapheditor\\uht\\snodepanel.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\swrapbox.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommonlog.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommon.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommonlogcategory.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\coglocalizationconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebug.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugevent.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugsettings.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogdebug\\uht\\cogdebugsettings.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugtracker.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugtrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugplottrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebug\\public\\cogdebugeventtrack.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogcommon\\uht\\cogcommonlog.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogdebugeditor\\public\\scogdebuglogcategorywidget.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

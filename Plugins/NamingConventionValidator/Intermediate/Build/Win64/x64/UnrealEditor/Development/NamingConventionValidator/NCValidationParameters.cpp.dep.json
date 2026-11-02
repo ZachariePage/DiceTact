@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\source\\namingconventionvalidator\\ncvalidationparameters.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\namingconventionvalidator\\definitions.namingconventionvalidator.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\source\\namingconventionvalidator\\ncvalidationparameters.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\intermediate\\build\\win64\\unrealeditor\\inc\\namingconventionvalidator\\uht\\ncvalidationparameters.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogCommonUI.cpp.obj": [
+			"CogCommonUI.init.gen.cpp.obj",
+			"CogCommonUI_ActionRouter.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogCommonUIModule.cpp.obj",
+			"CogCommonUI_ActionRouter.cpp.obj"
+		]
+	}
+}

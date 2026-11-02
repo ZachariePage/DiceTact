@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WidgetSplineSystemEditor.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"Logging.cpp.obj",
+			"SplineWidgetDetailsCustomization.cpp.obj",
+			"SplineWidgetEditPanel.cpp.obj",
+			"WidgetSplineSystemEditor.cpp.obj"
+		]
+	}
+}

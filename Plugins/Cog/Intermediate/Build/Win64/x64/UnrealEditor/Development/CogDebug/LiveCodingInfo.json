@@ -1,0 +1,34 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogDebug.cpp.obj": [
+			"CogDebug.init.gen.cpp.obj",
+			"CogDebugDrawBlueprint.gen.cpp.obj",
+			"CogDebugGizmo.gen.cpp.obj",
+			"CogDebugLogBlueprint.gen.cpp.obj",
+			"CogDebugPlotBlueprint.gen.cpp.obj",
+			"CogDebugPluginSubsystem.gen.cpp.obj",
+			"CogDebugReplicator.gen.cpp.obj",
+			"CogDebugSettings.gen.cpp.obj",
+			"CogDebugSubsystem.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogDebug.cpp.obj",
+			"CogDebugDraw.cpp.obj",
+			"CogDebugDrawBlueprint.cpp.obj",
+			"CogDebugDrawHelper.cpp.obj",
+			"CogDebugDrawImGui.cpp.obj",
+			"CogDebugEvent.cpp.obj",
+			"CogDebugEventTrack.cpp.obj",
+			"CogDebugGizmo.cpp.obj",
+			"CogDebugHelper.cpp.obj",
+			"CogDebugLog.cpp.obj",
+			"CogDebugLogBlueprint.cpp.obj",
+			"CogDebugMetric.cpp.obj",
+			"CogDebugModule.cpp.obj",
+			"CogDebugPlotBlueprint.cpp.obj",
+			"CogDebugReplicator.cpp.obj",
+			"CogDebugShape.cpp.obj",
+			"CogDebugTracker.cpp.obj"
+		]
+	}
+}

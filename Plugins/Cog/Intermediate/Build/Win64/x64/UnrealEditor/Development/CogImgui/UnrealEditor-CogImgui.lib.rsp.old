@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CogImgui.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Intermediate/Build/Win64/x64/DiceTactEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogImgui/Module.CogImgui.cpp.obj"
+"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogImgui/Default.rc2.res"
+/OUT:"H:/UnrealEngine/NewDiceTact/20263-Projets3e/DiceTact/DiceTactUE/Plugins/Cog/Intermediate/Build/Win64/x64/UnrealEditor/Development/CogImgui/UnrealEditor-CogImgui.lib"

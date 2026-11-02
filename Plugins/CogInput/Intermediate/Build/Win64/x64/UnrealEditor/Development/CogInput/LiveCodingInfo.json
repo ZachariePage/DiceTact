@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogInput.cpp.obj": [
+			"CogInput.init.gen.cpp.obj",
+			"CogInputWindow_Actions.gen.cpp.obj",
+			"CogInputWindow_Gamepad.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogInputActionInfo.cpp.obj",
+			"CogInputModule.cpp.obj",
+			"CogInputWindow_Actions.cpp.obj",
+			"CogInputWindow_Gamepad.cpp.obj"
+		]
+	}
+}

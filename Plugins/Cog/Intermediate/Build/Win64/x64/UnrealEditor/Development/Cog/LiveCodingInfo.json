@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Cog.cpp.obj": [
+			"Cog.init.gen.cpp.obj",
+			"CogPluginSubsystem.gen.cpp.obj",
+			"CogSubsystem.gen.cpp.obj",
+			"CogWindow_Settings.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogConsoleCommandManager.cpp.obj",
+			"CogHelper.cpp.obj",
+			"CogModule.cpp.obj",
+			"CogSubsystem.cpp.obj",
+			"CogWidgets.cpp.obj",
+			"CogWindow.cpp.obj",
+			"CogWindow_Layouts.cpp.obj",
+			"CogWindow_Settings.cpp.obj",
+			"CogWindow_Spacing.cpp.obj"
+		]
+	}
+}

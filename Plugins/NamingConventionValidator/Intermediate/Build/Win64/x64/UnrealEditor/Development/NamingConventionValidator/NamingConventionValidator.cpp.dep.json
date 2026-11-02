@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\source\\namingconventionvalidator\\private\\namingconventionvalidator.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\namingconventionvalidator\\definitions.namingconventionvalidator.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\source\\namingconventionvalidator\\public\\namingconventionvalidator.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\source\\namingconventionvalidator\\editorncvsubsystem.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\editor\\blutility\\public\\editorutilitysubsystem.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\uht\\editorutilitysubsystem.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\namingconventionvalidator\\intermediate\\build\\win64\\unrealeditor\\inc\\namingconventionvalidator\\uht\\editorncvsubsystem.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

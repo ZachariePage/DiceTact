@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogImgui.cpp.obj": [
+			"CogImgui.init.gen.cpp.obj",
+			"CogInputChord.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogImguiConfig.cpp.obj",
+			"CogImguiContext.cpp.obj",
+			"CogImguiDrawList.cpp.obj",
+			"CogImguiHelper.cpp.obj",
+			"CogImguiInputCatcherWidget.cpp.obj",
+			"CogImguiInputHelper.cpp.obj",
+			"CogImguiModule.cpp.obj",
+			"CogImguiWidget.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogAI.cpp.obj": [
+			"CogAI.init.gen.cpp.obj",
+			"CogAIDataAsset.gen.cpp.obj",
+			"CogAIWindow_BehaviorTree.gen.cpp.obj",
+			"CogAIWindow_Blackboard.gen.cpp.obj",
+			"CogAIWindow_Perception.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"CogAIModule.cpp.obj",
+			"CogAIWindow_BehaviorTree.cpp.obj",
+			"CogAIWindow_Blackboard.cpp.obj",
+			"CogAIWindow_Perception.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,43 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogai\\module.cogai.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\intermediate\\build\\win64\\x64\\dicetacteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogai\\definitions.cogai.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogai.init.gen.cpp",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaidataasset.gen.cpp",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\source\\cogai\\public\\cogaidataasset.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaidataasset.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_behaviortree.gen.cpp",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\source\\cogai\\public\\cogaiwindow_behaviortree.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogcommon\\public\\cogcommonconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\intermediate\\build\\win64\\unrealeditor\\inc\\cogcommon\\uht\\cogcommonconfig.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cog\\public\\cogwindow.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imgui.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\cogimgui\\public\\cogimguiconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cog\\source\\thirdparty\\imgui\\imconfig.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_behaviortree.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_blackboard.gen.cpp",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\source\\cogai\\public\\cogaiwindow_blackboard.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_blackboard.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_perception.gen.cpp",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\source\\cogai\\public\\cogaiwindow_perception.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptiontypes.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentselector.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navagentselector.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\aitypes.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "h:\\unrealengine\\ue_5.7\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\aiperceptiontypes.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\unrealeditor\\inc\\cogai\\uht\\cogaiwindow_perception.generated.h",
+            "h:\\unrealengine\\newdicetact\\20263-projets3e\\dicetact\\dicetactue\\plugins\\cogai\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cogai\\permoduleinline.gen.cpp",
+            "h:\\unrealengine\\ue_5.7\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

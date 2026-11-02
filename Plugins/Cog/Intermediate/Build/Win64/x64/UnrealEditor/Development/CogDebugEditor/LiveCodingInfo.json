@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CogDebugEditor.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"CogDebugEditorModule.cpp.obj",
+			"CogDebugLogCategoryDetails.cpp.obj",
+			"SCogDebugLogCategoryGraphPin.cpp.obj",
+			"SCogDebugLogCategoryWidget.cpp.obj"
+		]
+	}
+}

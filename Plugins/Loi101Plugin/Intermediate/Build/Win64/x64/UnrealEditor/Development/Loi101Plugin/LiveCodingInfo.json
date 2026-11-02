@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Loi101Plugin.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"Loi101Plugin.cpp.obj"
+		]
+	}
+}
